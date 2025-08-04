@@ -48,32 +48,32 @@ export function ContactForm() {
     if (result.success) {
       toast({
         title: "Message Sent!",
-        description: "Thank you for reaching out. We'll be in touch soon.",
+        description: "Thanks for reaching out. We'll get back to you soon!",
       });
       form.reset();
     } else {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
+        title: "Oops! Something went wrong.",
         description: result.message,
       });
     }
   }
 
   return (
-    <Card className="bg-card">
+    <Card className="bg-card/80 backdrop-blur-sm border-border/20 shadow-lg">
         <CardHeader>
-            <CardTitle className="font-headline text-center">Send a Message</CardTitle>
+            <CardTitle className="text-center text-2xl font-semibold">Send a Message</CardTitle>
         </CardHeader>
         <CardContent>
             <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Full Name</FormLabel>
+                    <FormLabel className="font-medium">Full Name</FormLabel>
                     <FormControl>
                         <Input placeholder="Your Name" {...field} />
                     </FormControl>
@@ -86,7 +86,7 @@ export function ContactForm() {
                 name="email"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Email Address</FormLabel>
+                    <FormLabel className="font-medium">Email Address</FormLabel>
                     <FormControl>
                         <Input placeholder="your.email@example.com" {...field} />
                     </FormControl>
@@ -99,10 +99,11 @@ export function ContactForm() {
                 name="message"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Your Message</FormLabel>
+                    <FormLabel className="font-medium">Your Message</FormLabel>
                     <FormControl>
                         <Textarea
-                        placeholder="Tell us about your project or inquiry..."
+                        placeholder="Tell us how we can help..."
+                        className="min-h-[120px]"
                         {...field}
                         />
                     </FormControl>
@@ -110,8 +111,8 @@ export function ContactForm() {
                     </FormItem>
                 )}
                 />
-                <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-                {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                <Button type="submit" className="w-full text-lg py-6" disabled={form.formState.isSubmitting}>
+                {form.formState.isSubmitting ? "Sending..." : "Submit Inquiry"}
                 </Button>
             </form>
             </Form>

@@ -9,13 +9,13 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
 
 export default async function Home() {
-  let aboutContent = "We are a creative agency specializing in brand identity and storytelling. We focus on luxury, lifestyle, and hospitality sectors, weaving timeless narratives and creating authentic connections between brands and their audience.";
+  let aboutContent = "We are a forward-thinking startup leveraging cutting-edge AI to build innovative solutions for the modern web. Our mission is to empower businesses and developers with powerful, easy-to-use tools that drive growth and efficiency.";
   let contentGenerationError = false;
 
   try {
     if (process.env.GEMINI_API_KEY) {
       const result = await generatePageContent({
-        prompt: "Generate a sophisticated and concise 'About Us' section for 'Threadspace Studio', a creative agency specializing in brand identity and storytelling. We focus on luxury, lifestyle, and hospitality sectors. Emphasize our philosophy of weaving timeless narratives and creating authentic connections between brands and their audience. The tone should be elegant, confident, and inspiring."
+        prompt: "Generate a concise and impactful 'About Us' section for 'SynthWave AI', a startup providing AI-powered solutions. Emphasize innovation, cutting-edge technology, and empowering businesses. The tone should be modern, confident, and tech-focused."
       });
       aboutContent = result.content;
     } else {
@@ -27,7 +27,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow">
         {contentGenerationError && (
