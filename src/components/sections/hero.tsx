@@ -26,7 +26,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center space-y-6 text-center">
           <div className="space-y-4">
             <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-br from-gray-200 to-gray-500 leading-tight">
-             ✨ “Where Ideas Turn Into Systems. And Culture Becomes Code.”
+             Where Ideas Turn Into Systems. And Culture Becomes Code.
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
              Threadspace is a creative-tech venture studio crafting bold ventures, future-forward platforms, and cultural systems — built in Africa, made for everywhere.
