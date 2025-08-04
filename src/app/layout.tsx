@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import { Preloader } from '@/components/layout/preloader';
 
 export const metadata: Metadata = {
   title: 'Threadspace Studio',
@@ -20,7 +21,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans antialiased">
-        {children}
+        <Preloader />
+        <div className="opacity-0 animate-fade-in delay-500">
+          {children}
+        </div>
         <Toaster />
       </body>
     </html>
