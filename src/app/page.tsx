@@ -1,4 +1,3 @@
-import { generatePageContent } from '@/ai/flows/generate-page-content';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/sections/hero';
@@ -7,26 +6,10 @@ import { VenturesGrid } from '@/components/sections/ventures';
 import { ContactSection } from '@/components/sections/contact';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
-import { TestimonialsSection } from '@/components/sections/testimonials';
-import { PricingSection } from '@/components/sections/pricing';
 
 export default async function Home() {
-  let aboutContent = "We are a forward-thinking startup leveraging cutting-edge AI to build innovative solutions for the modern web. Our mission is to empower businesses and developers with powerful, easy-to-use tools that drive growth and efficiency.";
-  let contentGenerationError = false;
-
-  try {
-    if (process.env.GEMINI_API_KEY) {
-      const result = await generatePageContent({
-        prompt: "Generate a concise and impactful 'About Us' section for 'SynthWave AI', a startup providing AI-powered solutions. Emphasize innovation, cutting-edge technology, and empowering businesses. The tone should be modern, confident, and tech-focused."
-      });
-      aboutContent = result.content;
-    } else {
-      contentGenerationError = true;
-    }
-  } catch (error) {
-    console.error(error);
-    contentGenerationError = true;
-  }
+  const aboutContent = "Threadspace is where innovation meets execution. We’re a multidisciplinary studio shaping future-ready ideas through thoughtful design, modular technology, and collaborative ventures. From solo experiments to scalable platforms, we operate at the intersection of culture, systems, and transformation—especially across Africa and the global South.";
+  const contentGenerationError = !process.env.GEMINI_API_KEY;
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -46,8 +29,6 @@ export default async function Home() {
         <HeroSection />
         <AboutSection content={aboutContent} />
         <VenturesGrid />
-        <TestimonialsSection />
-        <PricingSection />
         <ContactSection />
       </main>
       <Footer />

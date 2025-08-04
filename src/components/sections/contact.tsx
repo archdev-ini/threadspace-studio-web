@@ -1,19 +1,23 @@
+import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
 
 export function ContactSection() {
   return (
     <section id="contact" className="w-full py-20 md:py-28 lg:py-36">
-      <div className="container grid items-center justify-center gap-10 px-4 md:px-6">
-        <div className="space-y-4 text-center">
+      <div className="container grid items-center justify-center gap-10 px-4 text-center md:px-6">
+        <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl/tight">
-            Ready to Build the Future?
+            Let’s build the future — together.
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-            Let's connect. Drop us a message and our team will get back to you shortly.
+            Whether you’re a builder, thinker, funder, or dreamer, we’re open to new ideas, collabs, and partnerships. Drop us a message — or let’s create something timeless.
           </p>
         </div>
-        <div className="mx-auto w-full max-w-md lg:max-w-lg">
-          <ContactForm />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg">
+                <a href="mailto:hello@threadspace.studio">Email Us</a>
+            </Button>
+            {/* The contact form can be re-enabled here if needed */}
         </div>
       </div>
     </section>

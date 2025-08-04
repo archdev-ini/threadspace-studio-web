@@ -1,14 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export function Header() {
   const navLinks = [
+    { href: "#work", label: "Work" },
     { href: "#about", label: "About" },
-    { href: "#features", label: "Features" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -17,8 +15,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Zap className="h-6 w-6 text-accent" />
-            <span className="font-bold text-lg">SynthWave AI</span>
+            <span className="font-bold text-lg">Threadspace</span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -33,11 +30,8 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild variant="ghost">
-            <a href="#">Log In</a>
-          </Button>
           <Button asChild className="shadow-lg shadow-accent/20">
-            <a href="#contact">Get Started</a>
+            <a href="#contact">Email Us</a>
           </Button>
           <div className="md:hidden">
              <Sheet>
