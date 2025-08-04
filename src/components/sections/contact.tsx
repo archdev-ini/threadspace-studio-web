@@ -21,7 +21,7 @@ export function ContactSection() {
             </Button>
         </div>
         <div className="flex justify-center space-x-6 mt-4">
-             <Link href="https://instagram.com/threadspace__" aria-label="Instagram">
+             <Link href="https://instagram.com/threadspace_" aria-label="Instagram">
                 <Instagram className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
             </Link>
              <Link href="mailto:hello@threadspace.xyz" aria-label="Email">
