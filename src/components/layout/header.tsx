@@ -11,8 +11,8 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur-sm">
-      <div className="container flex h-16 items-center">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold text-lg">Threadspace</span>
@@ -23,17 +23,14 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-accent text-foreground/60 hover:text-foreground/80"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="shadow-lg shadow-accent/20">
-            <a href="#contact">Email Us</a>
-          </Button>
-          <div className="md:hidden">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+           <div className="md:hidden">
              <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
@@ -42,11 +39,14 @@ export function Header() {
                 </SheetTrigger>
                 <SheetContent side="right">
                    <nav className="flex flex-col gap-4 mt-8">
+                      <Link href="/" className="mr-6 flex items-center space-x-2">
+                        <span className="font-bold text-lg">Threadspace</span>
+                      </Link>
                       {navLinks.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="text-lg font-medium transition-colors hover:text-accent"
+                          className="text-lg font-medium transition-colors hover:text-primary"
                         >
                           {link.label}
                         </Link>

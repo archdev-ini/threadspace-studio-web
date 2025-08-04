@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/contact-form";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full py-20 md:py-28 lg:py-36">
+    <section id="contact" className="w-full py-20 md:py-28 lg:py-36 bg-secondary/20">
       <div className="container grid items-center justify-center gap-10 px-4 text-center md:px-6">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl/tight">
@@ -14,10 +14,9 @@ export function ContactSection() {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="shadow-lg shadow-primary/20">
                 <a href="mailto:hello@threadspace.studio">Email Us</a>
             </Button>
-            {/* The contact form can be re-enabled here if needed */}
         </div>
       </div>
     </section>

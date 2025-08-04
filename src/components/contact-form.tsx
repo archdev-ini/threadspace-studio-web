@@ -61,7 +61,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="bg-card/80 backdrop-blur-sm border-border/20 shadow-lg">
+    <Card className="bg-secondary border-border/60 shadow-lg">
         <CardHeader>
             <CardTitle className="text-center text-2xl font-semibold">Send a Message</CardTitle>
         </CardHeader>

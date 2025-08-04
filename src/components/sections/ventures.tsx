@@ -48,7 +48,7 @@ const ventures = [
 
 export function VenturesGrid() {
   return (
-    <section id="work" className="w-full py-20 md:py-28 lg:py-36 bg-primary/20">
+    <section id="work" className="w-full py-20 md:py-28 lg:py-36">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Our Experiments, Platforms, and Tools</h2>
@@ -56,23 +56,25 @@ export function VenturesGrid() {
             Each venture we build is an expression of purpose, curiosity, and systems thinking. Some are active. Some are in progress. All are built with care.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {ventures.slice(0, 3).map((venture) => (
-            <Card key={venture.name} className="overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2 duration-300 bg-card/80 backdrop-blur-sm border-border/20 flex flex-col">
-              <Image
-                src={venture.image}
-                alt={`Image for ${venture.name}`}
-                width={600}
-                height={400}
-                className="object-cover w-full h-48"
-                data-ai-hint={venture.hint}
-              />
+            <Card key={venture.name} className="overflow-hidden transition-all duration-300 bg-secondary border-border/60 hover:border-primary/80 hover:shadow-primary/20 shadow-lg flex flex-col group">
+              <div className="overflow-hidden">
+                <Image
+                  src={venture.image}
+                  alt={`Image for ${venture.name}`}
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+                  data-ai-hint={venture.hint}
+                />
+              </div>
               <CardContent className="p-6 flex-grow">
-                <h3 className="text-2xl font-bold mb-2">{venture.name}</h3>
-                <p className="text-muted-foreground text-lg">{venture.description}</p>
+                <h3 className="text-xl font-bold mb-2">{venture.name}</h3>
+                <p className="text-muted-foreground">{venture.description}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                 <Button asChild variant="link" className="p-0 h-auto text-accent">
+                 <Button asChild variant="link" className="p-0 h-auto text-primary">
                     <a href={venture.link}>
                         {venture.cta} <ArrowRight className="ml-2 h-4 w-4" />
                     </a>

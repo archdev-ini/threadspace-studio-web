@@ -21,7 +21,7 @@ const principles = [
     description: "Our work is rooted in purpose, not just product.",
   },
   {
-    icon: Layers, // Placeholder for Africa-first
+    icon: Layers, 
     title: "Africa-first",
     description: "Designed by us, for our realities.",
   },
@@ -35,7 +35,7 @@ const principles = [
 
 export function AboutSection({ content }: AboutSectionProps) {
   return (
-    <section id="about" className="w-full py-20 md:py-28 lg:py-36">
+    <section id="about" className="w-full py-20 md:py-28 lg:py-36 bg-secondary/20">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div className="space-y-3">
@@ -47,12 +47,12 @@ export function AboutSection({ content }: AboutSectionProps) {
         </div>
         <div className="mx-auto grid justify-center gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pt-16">
           {principles.map((principle) => (
-            <div key={principle.title} className="flex flex-col items-center text-center">
-              <div className="mb-4 rounded-full bg-primary/20 p-4 text-accent">
-                <principle.icon className="h-8 w-8" />
+            <div key={principle.title} className="flex flex-col items-center text-center space-y-2">
+              <div className="mb-2 rounded-full border border-primary/20 bg-primary/10 p-3 text-primary">
+                <principle.icon className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold">{principle.title}</h3>
-              <p className="text-muted-foreground">{principle.description}</p>
+              <p className="text-muted-foreground text-sm">{principle.description}</p>
             </div>
           ))}
         </div>
