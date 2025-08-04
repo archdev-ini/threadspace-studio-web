@@ -22,10 +22,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <Preloader />
-        <div className="opacity-0 animate-fade-in delay-500">
-          {children}
-        </div>
-        <Toaster />
+        {children}
       </body>
     </html>
   );

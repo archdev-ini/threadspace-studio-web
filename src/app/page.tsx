@@ -26,10 +26,18 @@ export default async function Home() {
             </Alert>
           </div>
         )}
-        <HeroSection />
-        <AboutSection content={aboutContent} />
-        <VenturesGrid />
-        <ContactSection />
+        <div className="animate-fade-in opacity-0 [--animation-delay:500ms]">
+          <HeroSection />
+        </div>
+        <div className="animate-fade-in opacity-0 [--animation-delay:700ms]">
+          <AboutSection content={aboutContent} />
+        </div>
+        <div className="animate-fade-in opacity-0 [--animation-delay:900ms]">
+          <VenturesGrid />
+        </div>
+        <div className="animate-fade-in opacity-0 [--animation-delay:1100ms]">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>
