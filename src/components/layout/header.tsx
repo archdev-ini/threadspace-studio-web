@@ -5,8 +5,10 @@ import { Menu } from "lucide-react";
 
 export function Header() {
   const navLinks = [
-    { href: "#work", label: "Work" },
-    { href: "#about", label: "About" },
+    { href: "#ventures", label: "Ventures" },
+    { href: "#process", label: "Process" },
+    { href: "#partner", label: "Partner" },
+    { href: "#manifesto", label: "Manifesto" },
     { href: "#contact", label: "Contact" },
   ];
 

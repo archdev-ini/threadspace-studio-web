@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { Preloader } from '@/components/layout/preloader';
 
 export const metadata: Metadata = {
-  title: 'Threadspace Studio',
-  description: 'Weaving Narratives, Crafting Legacies.',
+  title: 'Threadspace',
+  description: 'Where Ideas Turn Into Systems. And Culture Becomes Code.',
 };
 
 export default function RootLayout({
@@ -23,6 +23,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Preloader />
         {children}
+        <Toaster />
       </body>
     </html>
   );

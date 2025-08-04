@@ -6,9 +6,13 @@ import { VenturesGrid } from '@/components/sections/ventures';
 import { ContactSection } from '@/components/sections/contact';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
+import { WhatWeDoSection } from '@/components/sections/what-we-do';
+import { BuildLoopSection } from '@/components/sections/build-loop';
+import { PartnerSection } from '@/components/sections/partner';
+import { ManifestoSection } from '@/components/sections/manifesto';
+
 
 export default async function Home() {
-  const aboutContent = "Threadspace is where innovation meets execution. We’re a multidisciplinary studio shaping future-ready ideas through thoughtful design, modular technology, and collaborative ventures. From solo experiments to scalable platforms, we operate at the intersection of culture, systems, and transformation—especially across Africa and the global South.";
   const contentGenerationError = !process.env.GEMINI_API_KEY;
 
   return (
@@ -30,12 +34,21 @@ export default async function Home() {
           <HeroSection />
         </div>
         <div className="animate-fade-in [--animation-delay:700ms]">
-          <AboutSection content={aboutContent} />
+          <WhatWeDoSection />
         </div>
         <div className="animate-fade-in [--animation-delay:900ms]">
           <VenturesGrid />
         </div>
-        <div className="animate-fade-in [--animation-delay:1100ms]">
+         <div className="animate-fade-in [--animation-delay:1100ms]">
+          <BuildLoopSection />
+        </div>
+         <div className="animate-fade-in [--animation-delay:1300ms]">
+          <PartnerSection />
+        </div>
+         <div className="animate-fade-in [--animation-delay:1500ms]">
+          <ManifestoSection />
+        </div>
+        <div className="animate-fade-in [--animation-delay:1700ms]">
           <ContactSection />
         </div>
       </main>
