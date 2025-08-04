@@ -17,14 +17,14 @@ export function ContactSection() {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="shadow-lg shadow-primary/20">
-                <a href="#">Join Our Mailing Loop</a>
+                <a href="mailto:hello@threadspace.studio">Join Our Mailing Loop</a>
             </Button>
         </div>
         <div className="flex justify-center space-x-6 mt-4">
              <Link href="https://instagram.com/threadspace_" aria-label="Instagram">
                 <Instagram className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
             </Link>
-             <Link href="mailto:hello@threadspace.xyz" aria-label="Email">
+             <Link href="mailto:hello@threadspace.studio" aria-label="Email">
                 <Mail className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
             </Link>
              <Link href="https://wa.me/2348167858012" aria-label="WhatsApp">
