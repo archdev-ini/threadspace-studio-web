@@ -7,6 +7,8 @@ import { VenturesGrid } from '@/components/sections/ventures';
 import { ContactSection } from '@/components/sections/contact';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
+import { TestimonialsSection } from '@/components/sections/testimonials';
+import { PricingSection } from '@/components/sections/pricing';
 
 export default async function Home() {
   let aboutContent = "We are a forward-thinking startup leveraging cutting-edge AI to build innovative solutions for the modern web. Our mission is to empower businesses and developers with powerful, easy-to-use tools that drive growth and efficiency.";
@@ -44,6 +46,8 @@ export default async function Home() {
         <HeroSection />
         <AboutSection content={aboutContent} />
         <VenturesGrid />
+        <TestimonialsSection />
+        <PricingSection />
         <ContactSection />
       </main>
       <Footer />
